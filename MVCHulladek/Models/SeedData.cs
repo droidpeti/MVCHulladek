@@ -70,7 +70,6 @@ namespace MVCHulladek.Models
                 );
                 context.SaveChanges();
 
-                // Adding 20 diversified Lakig
                 context.Lakig.AddRange(
                     new Lakig { Igeny = new DateTime(2020, 01, 15), SzolgaltatasId = 1, Mennyiseg = 1 },
                     new Lakig { Igeny = new DateTime(2020, 02, 16), SzolgaltatasId = 2, Mennyiseg = 2 },
