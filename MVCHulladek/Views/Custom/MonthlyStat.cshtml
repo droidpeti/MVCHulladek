@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MVCHulladek.Models.ViewModels.MonthlyStatViewModel>
+
+@{
+    ViewData["Title"] = "MonthlyStat";
+}
+
+@{
+    List<string> MonthsList = new List<string> { "Január", "Február", "Március", "Április", "Május", "Június", "Július", "Augusztus", "Szeptember", "Október", "November", "December" };
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">MonthlyStat</h1>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Havonkénti statisztikák</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Hónap</th>
+                        <th scope="col">Típus</th>
+                        <th scope="col">Szám</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@MonthsList[item.Month - 1]</td>
+                        <td>@item.Type</td>
+                        <td>@item.Count</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

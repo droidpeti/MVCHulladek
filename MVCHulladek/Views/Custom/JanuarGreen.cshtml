@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MVCHulladek.Models.Naptar>
+
+@{
+    ViewData["Title"] = "JanuarGreen";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">JanuarGreen</h1>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Januárban elszállított zöld hulladék</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th>
+                            Dátum
+                        </th>
+                        <th>
+                            Szolgáltatás
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Datum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Szolgaltatas.Jelentes)
+                                </td>
+                            </tr>
+                    }
+                </tbody>
+            </table>
+</div>
+</div>
+</div>

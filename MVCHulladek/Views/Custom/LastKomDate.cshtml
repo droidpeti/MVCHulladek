@@ -1,0 +1,26 @@
+﻿@model MVCHulladek.Models.Naptar
+
+@{
+    ViewData["Title"] = "LastKomDate";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">LastKomDate</h1>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Utolsó elszállított kommunális hulladék dátuma</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                    <tr class="alert-primary">
+                        <th>
+                            @Model.Datum
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
