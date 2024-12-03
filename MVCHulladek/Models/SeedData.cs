@@ -62,9 +62,26 @@ namespace MVCHulladek.Models
                         Mennyiseg = random.Next(1, 21)
                     });
                 }
+                naptarList.Add(new Naptar
+                {
+                    Datum = DateTime.Parse("2024-12-03+12:00"),
+                    SzolgaltatasId = 4
+                });
+                naptarList.Add(new Naptar
+                {
+                    Datum = DateTime.Parse("2024-12-03+12:00"),
+                    SzolgaltatasId = 3
+                });
+                lakigList.Add(new Lakig
+                {
+                    Igeny = DateTime.Parse("2024-01-01+12:00"),
+                    SzolgaltatasId = 4,
+                    Mennyiseg = random.Next(1, 21)
+                });
 
                 context.Naptar.AddRange(naptarList);
                 context.Lakig.AddRange(lakigList);
+                
                 context.SaveChanges();
             }
         }
